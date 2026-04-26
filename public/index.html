@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WanderlustID</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="chat-panel">
+      <header class="panel-header">
+        <p class="eyebrow">WanderlustID</p>
+        <h1>Siap Jelajah Hari Ini?</h1>
+        <p class="subtitle">Teman ngobrol travel yang bantu rencana trip cepat, hemat, dan seru.</p>
+      </header>
+
+      <section class="quick-replies" aria-label="Pertanyaan cepat">
+        <button type="button" class="chip" data-prompt="Bikin itinerary 3 hari di Labuan Bajo yang santai dan hemat.">Itinerary 3 Hari</button>
+        <button type="button" class="chip" data-prompt="Rekomendasi liburan budget 2 juta dari Jakarta untuk long weekend.">Budget 2 Juta</button>
+        <button type="button" class="chip" data-prompt="Kuliner khas Jogja yang wajib dicoba plus area makannya.">Kuliner Lokal</button>
+        <button type="button" class="chip" data-prompt="Destinasi alam dekat Bandung yang cocok buat healing akhir pekan.">Healing Weekend</button>
+      </section>
+
+      <section id="chat-box" class="chat-box" aria-live="polite"></section>
+
+      <form id="chat-form" class="chat-form" autocomplete="off">
+        <label for="user-input" class="sr-only">Tulis pertanyaan perjalanan</label>
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Contoh: itinerary 3 hari Labuan Bajo budget hemat"
+          required
+        />
+        <button type="submit" aria-label="Kirim pesan">
+          <span class="btn-icon btn-icon-send" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M21.7 3.3a1 1 0 0 0-1.02-.24l-18 7a1 1 0 0 0 .03 1.88l7.45 2.54 2.54 7.45a1 1 0 0 0 .94.67h.02a1 1 0 0 0 .92-.72l7-18a1 1 0 0 0-.23-1.03Zm-8.5 15.33-1.76-5.16a1 1 0 0 0-.62-.62L5.66 11.1l12.98-5.05-5.44 12.58Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="btn-icon btn-icon-loading" aria-hidden="true"></span>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
